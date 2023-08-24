@@ -27,13 +27,15 @@ class _LoadingState extends State<Loading> {
   }
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.black,
-      body: Padding(
-        padding: EdgeInsets.all(50.0),
-        child: SpinKitSquareCircle(
-          color: Colors.white,
-          size: 100.0,
+    return SafeArea(
+      child: const Scaffold(
+        backgroundColor: Colors.black,
+        body: Padding(
+          padding: EdgeInsets.all(50.0),
+          child: SpinKitSquareCircle(
+            color: Colors.white,
+            size: 100.0,
+          ),
         ),
       ),
     );

@@ -19,6 +19,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: {
         "/":(context)=>Loading(),
         "/home":(context)=>MyApp(),
