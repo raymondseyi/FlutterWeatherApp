@@ -1,10 +1,11 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'dart:convert';
 
 class WeatherModel {
 
-  String apiKey = "09756d60b2011a99fb389f6e43e766cc";
+  String apiKey = dotenv.get('OPEN_WEATHER_MAP_API_KEY',fallback: 'OPEN WEATHER MAP API KEY NOT FOUND');
 
   Future<dynamic>getWeatherDetails() async{
     Position position = await Geolocator.getCurrentPosition();
